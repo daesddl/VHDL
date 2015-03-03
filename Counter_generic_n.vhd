@@ -11,7 +11,7 @@ entity Counter_generic_n is
 		RST	:	in	std_logic;
 		CLK	:	in	std_logic;
 		OPT	:	in 	std_logic_vector(1   downto 0);
-		Q	  :	out std_logic_vector(n-1 downto 0)
+		Q	:	out     std_logic_vector(n-1 downto 0)
 	);
 end Counter_generic_n;
 
