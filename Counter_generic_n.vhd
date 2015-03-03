@@ -33,10 +33,10 @@ begin
 	comb: process(OPT,Qp)
 	begin
 		case OPT is
-			when "00"   => Qn <= Qp;
-			when "01"   => Qn <= Qp + 1;
-			when "10"   => Qn <= Qp - 1;
-			when others => Qn <= (others => '0');	  
+			when "00"   => Qn <= Qp;		--Hold
+			when "01"   => Qn <= Qp + 1;		--Increase
+			when "10"   => Qn <= Qp - 1;		--Decrease
+			when others => Qn <= (others => '0');	--Internal Clean   
 		end case;
 		Q <= Qp;
 	end process comb;
