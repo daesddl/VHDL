@@ -62,14 +62,14 @@ begin
 	if(PULSE'event and PULSE = '1')then
 		if(i = 12)then						
 			i<=0;
-				for j in 0 to 11 loop
-					V(j) <= Vo(j);
-					if(Vo(j) = x"40")then
-						Vout(j) <= '1';
-					else
-						Vout(j) <= '0';
-					end if;
-				end loop;
+			for j in 0 to 11 loop
+				V(j) <= Vo(j);
+				if(Vo(j) = x"40")then
+					Vout(j) <= '1';
+				else
+					Vout(j) <= '0';
+				end if;
+			end loop;
 		else
 			if(PULSE'event and PULSE = '1')then
 				if(V(i)>= Theta)then
@@ -77,7 +77,7 @@ begin
 					for j in 0 to 11 loop
 						if(V(j) >= Theta and W(i,j) = x"40") then
 							Vo(i) <= x"40";
-			      end if;
+			      			end if;
 						if(j = 11)then
 							i <= i + 1;
 						end if;
@@ -98,4 +98,4 @@ begin
 	end if;
 end process;
 
-end architecture;
+end LOGIC;
