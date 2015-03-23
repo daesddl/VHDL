@@ -22,7 +22,7 @@ type ArrayW        is array(0 to 11,0 to 11) of std_logic_vector(7 downto 0);
 
 type Array8b       is array(0 to 11)         of std_logic_vector(7 downto 0);	
 
-signal W: ArrayW :=((x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"40",x"00",x"00"),
+signal W: ArrayW       :=((x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"40",x"00",x"00"),
 	                  (x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"40",x"00"),
  	                  (x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"40"),
 	                  (x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"40",x"00",x"00",x"00"),
@@ -46,7 +46,7 @@ signal COUNT : integer := 1;
 signal i     : integer := 0;
 begin	  
 	
-process (CLK) 	  								                          -- FREQUENCY DIVISOR a 3Hz  F=(50MHz/3Hz)/2 = 8333334
+process (CLK) 	  								 -- FREQUENCY DIVISOR a 3Hz  F=(50MHz/3Hz)/2 = 8333334
 	begin
         if (CLK'event and CLK = '1') then
             COUNT <= count +1;
